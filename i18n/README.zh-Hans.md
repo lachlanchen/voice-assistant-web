@@ -1,23 +1,30 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
-<a name="readme-top"></a>
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
 
+![GitHub last commit](https://img.shields.io/github/last-commit/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=0EA5E9)
+![Node.js](https://img.shields.io/badge/Node.js-18%2B-10B981?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.1-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![GitHub stars](https://img.shields.io/github/stars/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=F59E0B)
+![Open Issues](https://img.shields.io/github/issues/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=EF4444)
+
+<a name="readme-top"></a>
 
 <br />
 <div align="center">
 
+# Aura
+
 <h3 align="center">向 Aura 打个招呼 👋</h3>
 
 <p align="center">
-Aura 是一款针对低延迟响应优化的智能语音助手。它使用 Vercel Edge Functions、Whisper 语音识别、GPT-4o，以及 ElevenLabs TTS 流式合成。
+Aura 是一款基于浏览器、类 Siri 的语音助手，专为低延迟回复优化。它使用 Vercel Edge Functions、OpenAI Whisper 语音识别、GPT-4o 以及 ElevenLabs TTS 流式播放。
 <br />
 <br />
-<a href="https://voice.julianschoen.co">查看演示</a>
-·
-<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=">报告 Bug</a>
-·
-<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=">功能建议</a>
+<a href="https://voice.julianschoen.co"><img src="https://img.shields.io/badge/▶_Live_Demo-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo"/></a>
+<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title="><img src="https://img.shields.io/badge/🐞_Report_Bug-F43F5E?style=for-the-badge&logo=github&logoColor=white" alt="Report Bug"/></a>
+<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title="><img src="https://img.shields.io/badge/💡_Request_Feature-22C55E?style=for-the-badge&logo=github&logoColor=white" alt="Request Feature"/></a>
 </p>
 
 <p align="center">
@@ -38,88 +45,102 @@ Aura 是一款针对低延迟响应优化的智能语音助手。它使用 Verce
 
 ## 目录
 
-- [概览](#概览)
-- [功能](#功能)
-- [演示](#演示)
-- [项目动机](#项目动机)
-- [关于延迟与用户体验的思考](#关于延迟与用户体验的思考)
-- [架构](#架构)
-- [项目结构](#项目结构)
-- [前置要求](#前置要求)
-- [安装](#安装)
-- [配置](#配置)
-- [使用方式](#使用方式)
-- [API 示例](#api-示例)
-- [开发说明](#开发说明)
-- [故障排查](#故障排查)
-- [路线图](#路线图)
-- [贡献](#贡献)
-- [联系方式](#联系方式)
-- [免责声明](#免责声明)
-- [许可证](#许可证)
+- [📌 概览](#概览)
+- [✨ 特性](#特性)
+- [🎥 演示](#演示)
+- [🧠 动机](#动机)
+- [⏱️ 对延迟与用户体验的思考](#对延迟与用户体验的思考)
+- [🏗️ 架构](#架构)
+- [📁 项目结构](#项目结构)
+- [✅ 先决条件](#先决条件)
+- [🧰 安装](#安装)
+- [⚙️ 配置](#配置)
+- [🧪 使用](#使用)
+- [📦 API 示例](#api-示例)
+- [🛠️ 开发说明](#开发说明)
+- [🧯 故障排查](#故障排查)
+- [🗺️ 路线图](#路线图)
+- [❤️ Support](#%e2%9d%a4%ef%b8%8f-support)
+- [🤝 贡献](#贡献)
+- [📬 联系](#联系)
+- [⚠️ 免责声明](#免责声明)
+- [📄 许可证](#许可证)
 
 ## 概览
 
-Aura 是一个基于浏览器、类似 Siri 的语音助手，使用 Next.js（App Router）和 TypeScript 构建。
+Aura 是一个基于 Next.js（App Router）和 TypeScript 构建的、基于浏览器的 Siri 风格语音助手。
 
-### 快速了解
+### 一览
 
 | 领域 | 说明 |
 | --- | --- |
-| 主要目标 | 在 Web 上实现快速、实用、低延迟的语音交互 |
-| 运行模型 | 浏览器采集 + 服务端 API 路由 + Edge 对话端点 |
+| 主要目标 | 在网页端实现快速、实用、低延迟的语音交互 |
+| 运行模型 | 浏览器录音 + 服务器 API 路由 + Edge 聊天端点 |
 | 语音转文本 | OpenAI Whisper（`whisper-1`） |
 | 助手模型 | OpenAI GPT-4o |
-| 文本转语音 | 浏览器端 ElevenLabs 流式播放 |
+| 文本转语音 | 在浏览器端进行 ElevenLabs 流式播放 |
 
-交互流程如下：
+交互循环是：
 
 1. 在浏览器中采集麦克风音频。
-2. 使用 OpenAI Whisper（`whisper-1`）转写语音。
+2. 通过 OpenAI Whisper（`whisper-1`）进行语音转录。
 3. 使用 OpenAI GPT-4o 生成简洁回答。
-4. 使用 ElevenLabs 将合成音频流式返回给用户。
+4. 使用 ElevenLabs 在浏览器中回传并播放合成音频。
 
-项目围绕低延迟的实用 UX 进行优化，并在助手“监听中”或“思考中”时提供可视化反馈。
+该项目围绕实用的低延迟体验进行优化：助手在监听或思考时会提供可视化反馈。
 
-## 功能
+### 视觉摘要
 
-✅ 浏览器内的 Siri 风格语音助手  
-✅ 针对低延迟响应优化  
-✅ 基于 OpenAI、Whisper 语音识别和 ElevenLabs 构建
+| 阶段 | 目的 |
+| --- | --- |
+| 🎙️ 采集 | 浏览器音频采集 + 麦克风权限感知状态 |
+| 🧠 处理 | Whisper 转录 + GPT-4o 回答生成 |
+| 🔉 投递 | ElevenLabs 流式播放并带状态反馈 |
 
-更多实现细节：
+## 特性
 
-- 使用 Next.js 13 App Router 与 TypeScript。
-- Edge Runtime 对话端点（`/api/chat`）。
-- 基于 Toast 的交互反馈（麦克风权限、监听中、思考中）。
-- 带动画的助手按钮与流式 TTS 播放。
-- 可选 OpenAI Base URL 覆盖（适用于代理/自托管网关）。
+| 能力 | 含义 |
+| --- | --- |
+| ✅ 类 Siri 的浏览器助手 | 在简洁的网页界面中完成完整的语音输入与语音输出交互 |
+| ⚡ 低延迟流程 | 优化了采集、转录、生成和播放闭环 |
+| 🧠 LLM + TTS 技术栈 | OpenAI Whisper、GPT-4o 与 ElevenLabs 流式语音合成 |
+| 🧩 可扩展的应用架构 | 可通过项目级修改切换模型端点或语音服务提供方 |
+
+补充实现细节：
+
+| 关注点 | 当前行为 |
+| --- | --- |
+| 框架 | 使用 TypeScript 的 Next.js 13 App Router |
+| API 运行时 | Edge runtime 聊天端点（`/api/chat`） |
+| 体验反馈 | 通过 Toast 提示麦克风权限、监听和思考状态 |
+| 交互界面 | 有动画效果的助手按钮，搭配流式 TTS 播放 |
+| 网络 | 可选支持 OpenAI Base URL 覆写（适配代理/自建网关） |
 
 ## 演示
 
-你可以在这里体验 Aura：[https://voice.julianschoen.co](https://voice.julianschoen.co)
+你可以在这里试用 Aura：[https://voice.julianschoen.co](https://voice.julianschoen.co)
 
-## 项目动机
+## 动机
 
-语音助手已成为日常生活的重要组成部分：手机、汽车、家庭等场景都在使用。将这种体验以良好响应速度带到 Web 端，过去一直不容易。
+语音助手已经成为日常生活的一部分：手机、汽车、家庭设备等。把这种体验在网页上做到响应迅速，一直都不容易。
 
-直到最近，Web 语音助手的主要问题仍是延迟。把音频发送到服务端、生成 LLM 回复、再把语音流式返回，整体耗时过长。得益于 OpenAI、ElevenLabs 与 Vercel 的近期进展，现在终于可以构建出在 Web 上足够实用的语音助手。
+直到最近，网页语音助手的主要瓶颈仍然是延迟：将音频发送到服务器、生成 LLM 回复并回传语音都花费较长时间。OpenAI、ElevenLabs 与 Vercel 的最新进展让我们可以构建出在网页上足够快、足够实用的语音助手。
 
-这个仓库希望成为想要构建自己语音助手、并理解真实实现权衡的人们的首选参考。
+本仓库目标是为想要构建自己语音助手的人提供参考，并帮助理解真实落地时的取舍。
 
-## 关于延迟与用户体验的思考
+## 对延迟与用户体验的思考
 
-延迟是语音 UX 的关键因素。目前主要有三个贡献项：
+延迟是良好语音 UX 的最关键因素。当前有三个主要来源：
 
-- 转写耗时（Whisper 语音识别）。
-- 响应生成耗时（原项目注释中提到 GPT-4o Mini）。
+- 转录耗时（Whisper 语音识别）。
+- 回答生成耗时（原始说明中的 GPT-4o Mini）。
 - 语音合成流式耗时（ElevenLabs TTS）。
 
-根据实际测试记录，语音生成通常最耗时且最不稳定，尤其在回答较长时更明显。
+从实际测试看，语音生成通常最耗时且最难预测，尤其是长回复时。
 
-一个可行的缓解策略是将回答拆分为多个片段并依次流式输出。这样用户可以更早开始收听，而其余内容仍在生成中。当前尚未实现，但这是一个很有前景的方向。
+一种可能的缓解策略是把回复拆成多段并按顺序串流。这样用户可更早开始收听，而后续内容仍在生成中。这个功能尚未实现，但方向很有前景。
 
-另一个关键概念是“感知等待时间”。即使总延迟固定，只要用户能立刻收到反馈，通常会更能接受等待。项目当前在处理期间提供“思考中”提示，以改善感知响应速度。
+另一个关键概念是“感知等待时间”。即使端到端延迟不变，若用户在等待时能拿到即时反馈，容忍度通常更高。项目目前在处理阶段显示“thinking”提示，以提升感知响应性。
 
 ## 架构
 
@@ -132,9 +153,9 @@ Browser (MediaRecorder)
 
 关键文件：
 
-- `src/components/AssistantButton/AssistantButton.tsx`：录音状态、请求编排、播放。
-- `src/app/api/speechToText/route.ts`：base64 音频 -> `/tmp/input.webm` -> Whisper 转写。
-- `src/app/api/chat/route.ts`：通过 OpenAI 完成对话。
+- `src/components/AssistantButton/AssistantButton.tsx`：录音状态、请求编排与播放。
+- `src/app/api/speechToText/route.ts`：base64 音频 -> `/tmp/input.webm` -> Whisper 转录。
+- `src/app/api/chat/route.ts`：通过 OpenAI 进行聊天补全。
 - `src/app/page.tsx`：桌面优先界面与移动端降级提示。
 
 ## 项目结构
@@ -170,13 +191,15 @@ voice-assistant-web/
          └─ AssistantButton.tsx
 ```
 
-## 前置要求
+## 先决条件
 
-- Node.js 18+（推荐：Node.js 18.17+ 或 20 LTS，用于 Next.js 13）。
-- npm（项目使用 `package-lock.json`）。
-- OpenAI API key。
-- ElevenLabs API key 与 voice ID。
-- 可访问麦克风的桌面浏览器（当前设计下移动端 UX 有所限制）。
+| 要求 | 说明 |
+| --- | --- |
+| Node.js | 18+（推荐：Node.js 18.17+ 或 Next.js 13 对应的 20 LTS） |
+| 包管理器 | npm（项目使用 `package-lock.json`） |
+| API 访问 | OpenAI API Key |
+| TTS 访问 | ElevenLabs API Key 和 Voice ID |
+| 客户端 | 支持麦克风权限的桌面浏览器（当前移动端仍以桌面优先） |
 
 ## 安装
 
@@ -186,9 +209,7 @@ voice-assistant-web/
 git clone https://github.com/ntegrals/aura-voice
 ```
 
-2. 从 [https://openai.com/](https://openai.com/) 和 [https://elevenlabs.com/](https://elevenlabs.com/) 获取 API key。
-
-将 `.env.example` 复制为 `.env.local`，并填入你的密钥：
+2. 复制环境模板并编辑变量：
 
 ```sh
 cp .env.example .env.local
@@ -196,7 +217,7 @@ cp .env.example .env.local
 
 ```sh
 OPENAI_API_KEY="YOUR OPENAI API KEY"
-OPENAI_BASE_URL=(Optional)
+OPENAI_BASE_URL="" # 可选
 NEXT_PUBLIC_ELEVENLABS_API_KEY="YOUR ELEVENLABS API KEY"
 NEXT_PUBLIC_ELEVENLABS_VOICE_ID="YOUR ELEVENLABS VOICE ID"
 ```
@@ -207,15 +228,19 @@ NEXT_PUBLIC_ELEVENLABS_VOICE_ID="YOUR ELEVENLABS VOICE ID"
 npm install
 ```
 
-4. 在本地运行应用：
+4. 本地运行：
 
 ```sh
 npm run dev
 ```
 
-5. 部署到 Vercel：
+5. 打开应用：`http://localhost:3000`。
 
-该项目兼容 Next.js 在 Vercel 上的标准部署流程。
+补充假设：如果在非本地域名测试麦克风权限，通常需要 HTTPS。
+
+6. 部署到 Vercel：
+
+该项目遵循标准的 Next.js 部署流程。使用 Vercel 的默认导入设置，并在项目中设置同样的环境变量。
 
 ## 配置
 
@@ -223,22 +248,22 @@ npm run dev
 
 | 变量 | 必填 | 说明 |
 | --- | --- | --- |
-| `OPENAI_API_KEY` | Yes | 用于 Whisper 转写与 GPT 对话补全的 API key。 |
-| `OPENAI_BASE_URL` | No | 可选：覆盖 OpenAI API base URL（代理/网关）。 |
-| `NEXT_PUBLIC_ELEVENLABS_API_KEY` | Yes | 浏览器侧 TTS 请求使用的 ElevenLabs API key。 |
-| `NEXT_PUBLIC_ELEVENLABS_VOICE_ID` | Yes | 用于 TTS 合成的 ElevenLabs voice ID。 |
+| `OPENAI_API_KEY` | 是 | 用于 Whisper 转录与 GPT 聊天补全的 API Key。 |
+| `OPENAI_BASE_URL` | 否 | OpenAI API Base URL 的可选覆盖（代理/网关）。 |
+| `NEXT_PUBLIC_ELEVENLABS_API_KEY` | 是 | 浏览器端 TTS 请求使用的 ElevenLabs API Key。 |
+| `NEXT_PUBLIC_ELEVENLABS_VOICE_ID` | 是 | 用于 TTS 合成的 ElevenLabs Voice ID。 |
 
 说明：
 
 - 按 Next.js 约定，`NEXT_PUBLIC_*` 变量会暴露给客户端。
-- `speechToText` 当前会先将临时音频写入 `/tmp/input.webm` 再执行转写。
+- `speechToText` 目前会在转录前将音频先写入 `/tmp/input.webm`。
 
-## 使用方式
+## 使用
 
-1. 在桌面浏览器中打开应用。
-2. 点击一次助手圆球并授予麦克风权限。
-3. 再次点击开始录音，第三次点击停止并发送。
-4. Aura 会转写你的输入、生成回复，然后播放合成语音。
+1. 在桌面浏览器打开应用。
+2. 点击助手按钮一次并授权麦克风权限。
+3. 再点一次开始录音，第三次点停止并发送。
+4. Aura 会转录你的输入、生成回复，再播放合成语音。
 
 本地脚本：
 
@@ -251,7 +276,7 @@ npm run lint
 
 ## API 示例
 
-以下示例有助于调试本地 API 路由。
+这些示例用于调试本地 API 路由。
 
 ### `POST /api/speechToText`
 
@@ -261,7 +286,7 @@ curl -X POST http://localhost:3000/api/speechToText \
   -d '{"audio":"<base64-webm-audio>"}'
 ```
 
-期望响应结构：
+预期返回格式：
 
 ```json
 {
@@ -277,7 +302,7 @@ curl -X POST http://localhost:3000/api/chat \
   -d '{"messages":[{"role":"user","content":"Hello Aura"}]}'
 ```
 
-期望响应结构：
+预期返回格式：
 
 ```json
 "Assistant response text"
@@ -285,87 +310,95 @@ curl -X POST http://localhost:3000/api/chat \
 
 ## 开发说明
 
-- 对话路由配置为 Edge Runtime（`export const runtime = "edge"`）。
-- Whisper 路由在服务端运行，并依赖文件系统进行临时存储。
-- 当前 UI 在移动端提供降级提示，而不是完整交互。
-- 使用 Toast 通知展示权限/监听中/思考中状态。
-- 当前提示词约束为简洁回答（`Your answer has to be as consise as possible.`）。
+- Chat 路由已配置为 Edge runtime（`export const runtime = "edge"`）。
+- Whisper 路由在服务端运行，并依赖文件系统进行临时存储访问。
+- 当前 UI 在移动端仅显示 fallback 提示，而非完整的移动交互。
+- Toast 通知用于展示权限、监听和思考状态。
+- 当前提示词约束要求回答尽量简洁（`Your answer has to be as concise as possible.`）。
+- 运行时日志、请求可追踪性和流式行为当前在 CI 中尚未验证（仓库里暂无自动化测试）。
 
 ## 故障排查
 
-### 麦克风权限提示未出现
+### 🎤 麦克风权限提示未出现
 
-- 确认浏览器已允许 `localhost` 访问麦克风。
-- 在非 localhost 域名下测试时请使用 HTTPS。
+- 确保浏览器允许 `localhost` 的麦克风访问。
+- 在非 localhost 域名上测试时使用 HTTPS。
 
-### 没有音频播放
+### 🔈 无音频播放
 
 - 检查 `NEXT_PUBLIC_ELEVENLABS_API_KEY` 与 `NEXT_PUBLIC_ELEVENLABS_VOICE_ID`。
-- 确认浏览器自动播放/AudioContext 限制（需要用户交互触发）。
+- 确认浏览器自动播放和 AudioContext 限制（需要用户交互）。
 
-### `/api/speechToText` 返回 API 500
+### 📡 `/api/speechToText` 返回 500
 
-- 确认已设置 `OPENAI_API_KEY`。
-- 校验输入是否为有效的 base64 编码 `webm` 音频。
+- 确认 `OPENAI_API_KEY` 已设置。
+- 确认输入包含有效的 base64 编码 `webm` 音频。
 
-### `/api/chat` 返回 API 500
+### 📡 `/api/chat` 返回 500
 
-- 确认 `OPENAI_API_KEY` 和可选 `OPENAI_BASE_URL` 配置正确。
-- 检查你的 OpenAI 账户是否可用 `gpt-4o` 模型。
+- 确认 `OPENAI_API_KEY` 与可选的 `OPENAI_BASE_URL` 正确。
+- 检查你的 OpenAI 账号是否可用 `gpt-4o` 模型。
 
-### 延迟较高
+### ⏳ 高延迟
 
-- TTS 合成时间通常是端到端延迟中的主要部分。
+- TTS 合成时间通常是端到端延迟的主要部分。
 - 保持提示词简洁，并考虑拆分长回复。
 
 ## 路线图
 
-根据当前代码和注释推断的后续改进方向：
+潜在的后续优化（基于当前代码与说明）：
 
-- 支持移动端优先交互（替换当前仅桌面端的限制）。
-- 流式输出部分助手回复，降低感知延迟。
-- 完善转写与 TTS 失败场景下的重试/错误 UX。
-- 增加自动化测试与 CI 检查。
+- 支持移动优先交互（替换当前桌面优先门槛）。
+- 流式返回分段助手回复以降低感知延迟。
+- 改进转录与 TTS 失败场景的重试与错误体验。
+- 增加自动化测试和 CI 检查。
 - 扩展 [`/i18n`](./i18n/) 下的多语言文档。
 
 ## 贡献
 
-欢迎并感谢你的贡献。
+欢迎投稿并参与贡献。
 
-- 请先阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解流程与要求。
+- 阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解流程和预期。
 - 参与前请阅读 [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)。
-- Bug 或功能建议请通过 Issue 提交：
-- Bug report: [template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=)
-- Feature request: [template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=)
+- 针对 bug 或功能建议可提交 issue：
+- Bug 报告：[template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=)
+- 功能请求：[template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=)
 
-## 联系方式
+## 联系
 
-你好！感谢你查看并使用这个库。如果你想讨论你的项目、需要指导、考虑合作，或者只是想聊聊，都欢迎联系我。
+你好！感谢你查看并使用这个仓库。如果你想讨论你的项目、寻求指导、考虑聘请我，或者只是聊聊，我都很乐意交流。
 
-你可以发邮件到：`j.schoen@mail.com`，或在 Twitter 联系我：[ @julianschoen ](https://twitter.com/julianschoen)
+你可以发邮件到 `j.schoen@mail.com`，也可以在 Twitter 上私信我：[@julianschoen](https://twitter.com/julianschoen)
 
-如果你愿意支持一下，我有一个 Buy Me A Coffee 账户：
+如果你想支持我的工作，我有一个 Buy Me A Coffee 账户：
 
 <a href="https://www.buymeacoffee.com/ntegrals">
 <img src=".assets/buymeacoffee.png" alt="buymeacoffee" width="192">
 </a>
 
-感谢支持，祝你今天愉快 👋
+谢谢你，祝你今天愉快 👋
 
 ## 免责声明
 
-Voice Assistant 是一个实验性应用，以“按现状（as-is）”提供，不附带任何明示或暗示担保。使用本软件即表示你同意承担与使用相关的全部风险，包括但不限于数据丢失、系统故障或其他可能出现的问题。
+Voice Assistant 是一个实验性应用程序，按“原样”提供，不附带任何明示或默示担保。使用此软件即表示你同意自行承担其使用所带来的所有风险，包括但不限于数据丢失、系统故障或其他可能出现的问题。
 
-本项目的开发者与贡献者不对因使用本软件导致的任何损失、损害或其他后果承担责任。你需对基于 Voice Assistant 提供信息所作出的任何决定和行为负责。
+本项目的开发者和贡献者不承担因使用本软件而导致的任何损失、损害或其他后果的任何责任。你应对基于 Voice Assistant 提供的信息所做的任何决策和行为承担全部责任。
 
-请注意，使用 GPT-4 语言模型可能因 token 消耗产生较高费用。使用本项目即表示你确认需自行监控和管理 token 使用量及相关成本。强烈建议你定期检查 OpenAI API 使用情况，并设置必要的限额或告警以防止意外费用。
+请注意，使用 GPT-4 语言模型可能因 token 消耗而产生较高成本。使用本项目即表示你负责监控和管理自己的 token 使用与相关费用。强烈建议定期检查 OpenAI API 的使用情况，并设置必要的额度或提醒，以避免意外扣费。
 
-使用 Voice Assistant 即表示你同意赔偿、抗辩并使开发者、贡献者及任何关联方免受因你使用本软件或违反这些条款而产生的任何及所有索赔、损害、损失、责任、成本和费用（包括合理律师费）。
+在使用 Voice Assistant 时，你同意为开发者、贡献者及任何关联方提供赔偿、辩护并使其免受任何因此产生的索赔、损害、损失、责任、成本和费用（包括合理的律师费），该等索赔源于你使用本软件或违反本条款。
 
 <!-- LICENSE -->
 
 ## 许可证
 
-基于 MIT License 分发。详情请见 `LICENSE`。
+依据 MIT 许可证发布。详情见 `LICENSE`。
 
-仓库说明：当前仓库中许可证文件名为 [`LICENCE`](./LICENCE)。
+仓库说明：当前仓库将许可文件命名为 [`LICENCE`](./LICENCE)。
+
+
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |

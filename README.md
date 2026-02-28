@@ -1,22 +1,30 @@
 [English](README.md) · [العربية](i18n/README.ar.md) · [Español](i18n/README.es.md) · [Français](i18n/README.fr.md) · [日本語](i18n/README.ja.md) · [한국어](i18n/README.ko.md) · [Tiếng Việt](i18n/README.vi.md) · [中文 (简体)](i18n/README.zh-Hans.md) · [中文（繁體）](i18n/README.zh-Hant.md) · [Deutsch](i18n/README.de.md) · [Русский](i18n/README.ru.md)
 
-<a name="readme-top"></a>
 
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=0EA5E9)
+![Node.js](https://img.shields.io/badge/Node.js-18%2B-10B981?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.1-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![GitHub stars](https://img.shields.io/github/stars/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=F59E0B)
+![Open Issues](https://img.shields.io/github/issues/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=EF4444)
+
+<a name="readme-top"></a>
 
 <br />
 <div align="center">
 
+# Aura
+
 <h3 align="center">Say hi to Aura 👋</h3>
 
 <p align="center">
-Aura is a smart voice assistant optimized for low-latency responses. It uses Vercel Edge Functions, Whisper speech recognition, GPT-4o, and ElevenLabs TTS streaming.
+Aura is a browser-based, Siri-like voice assistant optimized for low-latency responses. It uses Vercel Edge Functions, Whisper speech recognition, GPT-4o, and ElevenLabs TTS streaming.
 <br />
 <br />
-<a href="https://voice.julianschoen.co">View Demo</a>
-·
-<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=">Report Bug</a>
-·
-<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=">Request Feature</a>
+<a href="https://voice.julianschoen.co"><img src="https://img.shields.io/badge/▶_Live_Demo-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo"/></a>
+<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title="><img src="https://img.shields.io/badge/🐞_Report_Bug-F43F5E?style=for-the-badge&logo=github&logoColor=white" alt="Report Bug"/></a>
+<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title="><img src="https://img.shields.io/badge/💡_Request_Feature-22C55E?style=for-the-badge&logo=github&logoColor=white" alt="Request Feature"/></a>
 </p>
 
 <p align="center">
@@ -37,25 +45,26 @@ Aura is a smart voice assistant optimized for low-latency responses. It uses Ver
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Demo](#demo)
-- [Motivation](#motivation)
-- [Thoughts on latency and user experience](#thoughts-on-latency-and-user-experience)
-- [Architecture](#architecture)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [API Examples](#api-examples)
-- [Development Notes](#development-notes)
-- [Troubleshooting](#troubleshooting)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [Contact](#contact)
-- [Disclaimer](#disclaimer)
-- [License](#license)
+- [📌 Overview](#overview)
+- [✨ Features](#features)
+- [🎥 Demo](#demo)
+- [🧠 Motivation](#motivation)
+- [⏱️ Thoughts on latency and user experience](#thoughts-on-latency-and-user-experience)
+- [🏗️ Architecture](#architecture)
+- [📁 Project Structure](#project-structure)
+- [✅ Prerequisites](#prerequisites)
+- [🧰 Installation](#installation)
+- [⚙️ Configuration](#configuration)
+- [🧪 Usage](#usage)
+- [📦 API Examples](#api-examples)
+- [🛠️ Development Notes](#development-notes)
+- [🧯 Troubleshooting](#troubleshooting)
+- [🗺️ Roadmap](#roadmap)
+- [🤝 Contributing](#contributing)
+- [❤️ Support](#%e2%9d%a4%ef%b8%8f-support)
+- [📬 Contact](#contact)
+- [⚠️ Disclaimer](#disclaimer)
+- [📄 License](#license)
 
 ## Overview
 
@@ -80,19 +89,32 @@ The interaction loop is:
 
 The project is optimized around practical low-latency UX, with visual feedback while the assistant is listening or thinking.
 
+### Visual summary
+
+| Stage | Intent |
+| --- | --- |
+| 🎙️ Capture | Browser audio capture + permission-aware UI states |
+| 🧠 Process | Whisper transcription + GPT-4o response generation |
+| 🔉 Deliver | ElevenLabs streaming playback with status feedback |
+
 ## Features
 
-✅ A Siri-like voice assistant within your browser  
-✅ Optimized for low-latency responses  
-✅ Built with OpenAI, Whisper speech recognition, and ElevenLabs
+| Capability | What this means |
+| --- | --- |
+| ✅ Siri-like browser assistant | Full voice-in, voice-out interaction in a simple web UI |
+| ⚡ Low-latency workflow | Optimized capture, transcription, completion, and playback loop |
+| 🧠 LLM + TTS stack | OpenAI Whisper, GPT-4o, and ElevenLabs streaming synthesis |
+| 🧩 Extensible app architecture | Swap model endpoint or speech provider with project-level changes |
 
 Additional implementation details:
 
-- Next.js 13 App Router with TypeScript.
-- Edge runtime chat endpoint (`/api/chat`).
-- Toast-based interaction feedback (microphone permission, listening, thinking).
-- Animated assistant button with streaming TTS playback.
-- Optional OpenAI base URL override for proxy/self-hosted gateway setups.
+| Focus area | Current behavior |
+| --- | --- |
+| Framework | Next.js 13 App Router with TypeScript |
+| API runtime | Edge runtime chat endpoint (`/api/chat`) |
+| UX feedback | Toast updates for mic permission, listening, and thinking states |
+| Interaction UI | Animated assistant button with streaming TTS playback |
+| Networking | Optional OpenAI base URL override for proxy/self-hosted gateway setups |
 
 ## Demo
 
@@ -171,11 +193,13 @@ voice-assistant-web/
 
 ## Prerequisites
 
-- Node.js 18+ (recommended: Node.js 18.17+ or 20 LTS for Next.js 13).
-- npm (project uses `package-lock.json`).
-- OpenAI API key.
-- ElevenLabs API key and voice ID.
-- A desktop browser with microphone access (mobile UX is currently limited by design).
+| Requirement | Details |
+| --- | --- |
+| Node.js | 18+ (recommended: Node.js 18.17+ or 20 LTS for Next.js 13) |
+| Package manager | npm (project uses `package-lock.json`) |
+| API access | OpenAI API key |
+| TTS access | ElevenLabs API key and voice ID |
+| Client | Desktop browser with microphone access (mobile UX is currently desktop-first) |
 
 ## Installation
 
@@ -185,9 +209,7 @@ voice-assistant-web/
 git clone https://github.com/ntegrals/aura-voice
 ```
 
-2. Get API keys from [https://openai.com/](https://openai.com/) and [https://elevenlabs.com/](https://elevenlabs.com/).
-
-Copy the `.env.example` file to `.env.local` and add your keys:
+2. Copy environment template and edit values:
 
 ```sh
 cp .env.example .env.local
@@ -195,7 +217,7 @@ cp .env.example .env.local
 
 ```sh
 OPENAI_API_KEY="YOUR OPENAI API KEY"
-OPENAI_BASE_URL=(Optional)
+OPENAI_BASE_URL="" # Optional
 NEXT_PUBLIC_ELEVENLABS_API_KEY="YOUR ELEVENLABS API KEY"
 NEXT_PUBLIC_ELEVENLABS_VOICE_ID="YOUR ELEVENLABS VOICE ID"
 ```
@@ -212,9 +234,13 @@ npm install
 npm run dev
 ```
 
-5. Deploy to Vercel:
+5. Open the app at `http://localhost:3000`.
 
-This project is compatible with the standard Vercel deployment flow for Next.js.
+Assumption: If you are testing microphone access on non-local domains, HTTPS is usually required.
+
+6. Deploy to Vercel:
+
+This project follows a standard Next.js deployment flow. Use Vercel's default import settings and set the same environment variables in your project.
 
 ## Configuration
 
@@ -288,31 +314,32 @@ Expected response shape:
 - Whisper route runs server-side and depends on file system access for temporary storage.
 - The UI currently provides a mobile fallback message instead of full mobile interaction.
 - Toast notifications are used to surface permission/listening/thinking states.
-- Current prompt shaping asks for concise answers (`Your answer has to be as consise as possible.`).
+- Current prompt shaping asks for concise answers (`Your answer has to be as concise as possible.`).
+- Runtime logs, request traceability, and streaming behavior are currently untested in CI (no automated test suite in repo).
 
 ## Troubleshooting
 
-### Microphone permission prompt does not appear
+### 🎤 Microphone permission prompt does not appear
 
 - Ensure your browser allows microphone access for `localhost`.
 - Use HTTPS when testing on non-localhost domains.
 
-### No audio playback
+### 🔈 No audio playback
 
 - Check `NEXT_PUBLIC_ELEVENLABS_API_KEY` and `NEXT_PUBLIC_ELEVENLABS_VOICE_ID`.
 - Verify browser autoplay/audio-context restrictions (user interaction is required).
 
-### API 500 from `/api/speechToText`
+### 📡 API 500 from `/api/speechToText`
 
 - Confirm `OPENAI_API_KEY` is set.
 - Validate input contains valid base64-encoded `webm` audio.
 
-### API 500 from `/api/chat`
+### 📡 API 500 from `/api/chat`
 
 - Confirm `OPENAI_API_KEY` and optional `OPENAI_BASE_URL` are correct.
 - Check model availability for `gpt-4o` in your OpenAI account.
 
-### High latency
+### ⏳ High latency
 
 - TTS synthesis time usually dominates end-to-end latency.
 - Keep prompts concise and consider splitting long responses.
@@ -336,6 +363,12 @@ Contributions are welcome and appreciated.
 - Open issues for bugs or feature ideas:
 - Bug report: [template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=)
 - Feature request: [template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=)
+
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
 
 ## Contact
 

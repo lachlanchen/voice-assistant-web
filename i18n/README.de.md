@@ -1,22 +1,30 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=0EA5E9)
+![Node.js](https://img.shields.io/badge/Node.js-18%2B-10B981?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.1-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![GitHub stars](https://img.shields.io/github/stars/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=F59E0B)
+![Open Issues](https://img.shields.io/github/issues/ntegrals/aura-voice?style=for-the-badge&logo=github&logoColor=white&color=EF4444)
+
 <a name="readme-top"></a>
 
 <br />
 <div align="center">
 
+# Aura
+
 <h3 align="center">Sag Hallo zu Aura 👋</h3>
 
 <p align="center">
-Aura ist ein intelligenter Sprachassistent, optimiert für Antworten mit niedriger Latenz. Er nutzt Vercel Edge Functions, Whisper-Spracherkennung, GPT-4o und ElevenLabs-TTS-Streaming.
+Aura ist ein browserbasierter, Siri-ähnlicher Sprachassistent mit optimierter Latenz. Er nutzt Vercel Edge Functions, Whisper Spracherkennung, GPT-4o und ElevenLabs TTS-Streaming.
 <br />
 <br />
-<a href="https://voice.julianschoen.co">Demo ansehen</a>
-·
-<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=">Bug melden</a>
-·
-<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=">Feature anfragen</a>
+<a href="https://voice.julianschoen.co"><img src="https://img.shields.io/badge/▶_Live_Demo-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo"/></a>
+<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title="><img src="https://img.shields.io/badge/🐞_Report_Bug-F43F5E?style=for-the-badge&logo=github&logoColor=white" alt="Report Bug"/></a>
+<a href="https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title="><img src="https://img.shields.io/badge/💡_Request_Feature-22C55E?style=for-the-badge&logo=github&logoColor=white" alt="Request Feature"/></a>
 </p>
 
 <p align="center">
@@ -26,7 +34,7 @@ Aura ist ein intelligenter Sprachassistent, optimiert für Antworten mit niedrig
 <a href="https://openai.com/"><img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-GPT--4o%20%2B%20Whisper-10A37F" /></a>
 <a href="https://elevenlabs.io/"><img alt="ElevenLabs" src="https://img.shields.io/badge/ElevenLabs-TTS%20Streaming-222222" /></a>
 <a href="https://vercel.com/"><img alt="Vercel Edge" src="https://img.shields.io/badge/Vercel-Edge%20Runtime-000000?logo=vercel" /></a>
-<a href="./LICENCE"><img alt="Lizenz" src="https://img.shields.io/badge/License-MIT-22C55E.svg" /></a>
+<a href="./LICENCE"><img alt="License" src="https://img.shields.io/badge/License-MIT-22C55E.svg" /></a>
 </p>
 
 </div>
@@ -37,88 +45,102 @@ Aura ist ein intelligenter Sprachassistent, optimiert für Antworten mit niedrig
 
 ## Inhaltsverzeichnis
 
-- [Überblick](#überblick)
-- [Features](#features)
-- [Demo](#demo)
-- [Motivation](#motivation)
-- [Gedanken zu Latenz und Benutzererlebnis](#gedanken-zu-latenz-und-benutzererlebnis)
-- [Architektur](#architektur)
-- [Projektstruktur](#projektstruktur)
-- [Voraussetzungen](#voraussetzungen)
-- [Installation](#installation)
-- [Konfiguration](#konfiguration)
-- [Verwendung](#verwendung)
-- [API-Beispiele](#api-beispiele)
-- [Entwicklungshinweise](#entwicklungshinweise)
-- [Fehlerbehebung](#fehlerbehebung)
-- [Roadmap](#roadmap)
-- [Mitwirken](#mitwirken)
-- [Kontakt](#kontakt)
-- [Haftungsausschluss](#haftungsausschluss)
-- [Lizenz](#lizenz)
+- [📌 Überblick](#überblick)
+- [✨ Funktionen](#funktionen)
+- [🎥 Demo](#demo)
+- [🧠 Motivation](#motivation)
+- [⏱️ Gedanken zur Latenz und Benutzererfahrung](#gedanken-zur-latenz-und-benutzererfahrung)
+- [🏗️ Architektur](#architektur)
+- [📁 Projektstruktur](#projektstruktur)
+- [✅ Voraussetzungen](#voraussetzungen)
+- [🧰 Installation](#installation)
+- [⚙️ Konfiguration](#konfiguration)
+- [🧪 Nutzung](#nutzung)
+- [📦 API Beispiele](#api-beispiele)
+- [🛠️ Entwicklungsnotizen](#entwicklungsnotizen)
+- [🧯 Fehlerbehebung](#fehlerbehebung)
+- [🗺️ Roadmap](#roadmap)
+- [🤝 Mitwirken](#mitwirken)
+- [❤️ Support](#%e2%9d%a4%ef%b8%8f-support)
+- [📬 Kontakt](#kontakt)
+- [⚠️ Haftungsausschluss](#haftungsausschluss)
+- [📄 Lizenz](#lizenz)
 
 ## Überblick
 
-Aura ist ein browserbasierter, Siri-ähnlicher Sprachassistent, der mit Next.js (App Router) und TypeScript entwickelt wurde.
+Aura ist ein browserbasierter, Siri-ähnlicher Sprachassistent, der mit Next.js (App Router) und TypeScript gebaut wurde.
 
 ### Auf einen Blick
 
 | Bereich | Details |
 | --- | --- |
-| Hauptziel | Schnelle, praktische Sprachinteraktion mit niedriger Latenz im Web |
+| Hauptziel | Schnelle, praktische Sprachinteraktion im Web mit geringer Latenz |
 | Laufzeitmodell | Browser-Aufnahme + Server-API-Routen + Edge-Chat-Endpunkt |
-| Speech-to-Text | OpenAI Whisper (`whisper-1`) |
+| Spracherkennung | OpenAI Whisper (`whisper-1`) |
 | Assistentenmodell | OpenAI GPT-4o |
-| Text-to-Speech | ElevenLabs-Streaming-Wiedergabe im Browser |
+| Text-zu-Sprache | ElevenLabs-Streaming-Wiedergabe im Browser |
 
-Der Interaktionszyklus ist:
+Der Interaktionsablauf ist:
 
 1. Mikrofon-Audio im Browser erfassen.
 2. Sprache mit OpenAI Whisper (`whisper-1`) transkribieren.
-3. Eine prägnante Antwort mit OpenAI GPT-4o erzeugen.
-4. Synthetisiertes Audio per ElevenLabs an den Nutzer zurückstreamen.
+3. Eine prägnante Antwort mit OpenAI GPT-4o generieren.
+4. Das synthetisierte Audio per ElevenLabs zurück an den Nutzer streamen.
 
-Das Projekt ist auf eine praxisnahe UX mit niedriger Latenz optimiert, inklusive visuellem Feedback, während der Assistent zuhört oder nachdenkt.
+Das Projekt ist auf eine praxisnahe UX mit niedriger Latenz optimiert – mit visuellem Feedback während der Assistent zuhört oder „nachdenkt“.
 
-## Features
+### Visuelle Zusammenfassung
 
-✅ Ein Siri-ähnlicher Sprachassistent direkt im Browser  
-✅ Optimiert für Antworten mit niedriger Latenz  
-✅ Entwickelt mit OpenAI, Whisper-Spracherkennung und ElevenLabs
+| Phase | Bedeutung |
+| --- | --- |
+| 🎙️ Aufnahme | Browser-Audioaufnahme + Zustände der UI entsprechend der Berechtigungen |
+| 🧠 Verarbeitung | Whisper-Transkription + GPT-4o-Response-Generierung |
+| 🔉 Ausgabe | ElevenLabs Streaming-Wiedergabe mit Status-Feedback |
+
+## Funktionen
+
+| Fähigkeit | Bedeutung |
+| --- | --- |
+| ✅ Siri-ähnlicher Browserassistent | Volle Sprach-Ein-/Ausgabe in einer einfachen Web-UI |
+| ⚡ Niedrige Latenz im Workflow | Optimierter Ablauf aus Aufnahme, Transkription, Completion und Wiedergabe |
+| 🧠 LLM + TTS-Stack | OpenAI Whisper, GPT-4o und ElevenLabs Streaming-Synthese |
+| 🧩 Erweiterbare App-Architektur | Tauschen Sie Modell-Endpunkt oder Sprachprovider auf Projektebene aus |
 
 Zusätzliche Implementierungsdetails:
 
-- Next.js 13 App Router mit TypeScript.
-- Edge-Runtime-Chat-Endpunkt (`/api/chat`).
-- Toast-basiertes Interaktionsfeedback (Mikrofonberechtigung, Zuhören, Nachdenken).
-- Animierter Assistenten-Button mit Streaming-TTS-Wiedergabe.
-- Optionale OpenAI-Base-URL-Überschreibung für Proxy-/Self-Hosted-Gateway-Setups.
+| Fokusbereich | Aktuelles Verhalten |
+| --- | --- |
+| Framework | Next.js 13 App Router mit TypeScript |
+| API-Laufzeit | Edge-runtime Chat-Endpunkt (`/api/chat`) |
+| UX-Feedback | Toast-Benachrichtigungen für Mikrofonrecht, Aufnahme und Denkzustand |
+| Interaktions-UI | Animierter Assistent-Button mit Streaming-TTS-Wiedergabe |
+| Netzwerk | Optionaler OpenAI-Basis-URL-Override für Proxy-/Self-Hosting-Gateway-Setups |
 
 ## Demo
 
-Du kannst Aura hier testen: [https://voice.julianschoen.co](https://voice.julianschoen.co)
+Testen Sie Aura hier: [https://voice.julianschoen.co](https://voice.julianschoen.co)
 
 ## Motivation
 
-Sprachassistenten sind ein fester Bestandteil des Alltags geworden: auf Smartphones, im Auto, zu Hause und mehr. Diese Erfahrung mit guter Reaktionsgeschwindigkeit ins Web zu bringen, war historisch schwierig.
+Sprachassistenten sind aus dem Alltag nicht mehr wegzudenken: auf Smartphones, im Auto, im Zuhause und darüber hinaus. Diese Erfahrung mit guter Reaktionsgeschwindigkeit ins Web zu bringen, war lange schwierig.
 
-Bis vor Kurzem war Latenz das Hauptproblem von Sprachassistenten im Web. Das Senden von Audio an den Server, das Erzeugen einer LLM-Antwort und das Zurückstreamen von Sprache dauerten zu lange. Jüngste Fortschritte bei OpenAI, ElevenLabs und Vercel ermöglichen es, einen Sprachassistenten zu bauen, der im Web schnell genug für die Praxis ist.
+Bis vor kurzem lag das Hauptproblem webbasierter Sprachassistenten in der Latenz. Es dauerte zu lange, Audio zum Server zu senden, eine LLM-Vervollständigung zu erzeugen und Sprache zurückzustreamen. Fortschritte von OpenAI, ElevenLabs und Vercel machen es nun möglich, einen Sprachassistenten im Browser zu bauen, der schnell genug ist, um praktisch eingesetzt zu werden.
 
-Dieses Repository soll eine zentrale Anlaufstelle für alle sein, die ihren eigenen Sprachassistenten bauen und die Trade-offs realer Implementierungen verstehen wollen.
+Dieses Repository soll ein zentraler Ort für Menschen sein, die ihren eigenen Sprachassistenten bauen möchten und die Kompromisse realer Implementierungen nachvollziehen wollen.
 
-## Gedanken zu Latenz und Benutzererlebnis
+## Gedanken zur Latenz und Benutzererfahrung
 
-Latenz ist der wichtigste Faktor für eine gute Voice-UX. Aktuell gibt es drei Hauptbeiträge:
+Latenz ist der wichtigste Faktor für eine gute Sprach-UX. Aktuell gibt es drei Hauptfaktoren:
 
-- Transkriptionszeit (Whisper-Spracherkennung).
-- Zeit für die Antwortgenerierung (GPT-4o Mini in den ursprünglichen Projektnotizen).
-- Streaming-Zeit der Sprachsynthese (ElevenLabs TTS).
+- Transkriptionszeit (Spracherkennung mit Whisper).
+- Zeit für die Antwortgenerierung (im ursprünglichen Projektvermerk: GPT-4o Mini).
+- Zeit für die Sprachsynthese-Übertragung (ElevenLabs TTS).
 
-Aus praktischen Testnotizen geht hervor, dass die Spracherzeugung in der Regel am meisten Zeit kostet und am wenigsten vorhersagbar ist, insbesondere bei längeren Antworten.
+Aus praktischen Tests zeigt sich, dass die Sprachgenerierung meist am längsten dauert und am wenigsten vorhersehbar ist, besonders bei längeren Antworten.
 
-Eine mögliche Gegenmaßnahme ist, die Antwort in mehrere Teile aufzuteilen und nacheinander zu streamen. So kann der Nutzer früher mit dem Zuhören beginnen, während der Rest noch erzeugt wird. Das ist aktuell noch nicht implementiert, aber ein vielversprechender Ansatz.
+Eine mögliche Gegenmaßnahme ist das Aufteilen der Antwort in mehrere Teile und deren sequentielles Streaming. So kann der Nutzer früher mit dem Hören beginnen, während der Rest noch erzeugt wird. Das ist noch nicht implementiert, aber ein vielversprechender Ansatz.
 
-Ein weiteres Schlüsselkonzept ist die wahrgenommene Wartezeit. Selbst wenn die Gesamtlatenz unverändert ist, tolerieren Nutzer Verzögerungen besser, wenn sie sofortiges Feedback erhalten. Das Projekt enthält derzeit eine "thinking"-Benachrichtigung während der Verarbeitung, um die wahrgenommene Reaktionsgeschwindigkeit zu verbessern.
+Ein weiterer zentraler Punkt ist die wahrgenommene Wartezeit. Selbst bei fixer Gesamtlatenz tolerieren Nutzende Verzögerungen besser, wenn sie sofort Feedback erhalten. Das Projekt zeigt derzeit während der Verarbeitung eine „Denkt“-Benachrichtigung, um die wahrgenommene Reaktionsfähigkeit zu verbessern.
 
 ## Architektur
 
@@ -129,12 +151,12 @@ Browser (MediaRecorder)
   -> ElevenLabs TTS stream playback in browser (AudioContext)
 ```
 
-Wichtige Dateien:
+Schlüsseldateien:
 
-- `src/components/AssistantButton/AssistantButton.tsx`: Aufnahmestatus, Request-Orchestrierung, Wiedergabe.
+- `src/components/AssistantButton/AssistantButton.tsx`: Aufnahmezustand, Anfrage-Orchestrierung, Wiedergabe.
 - `src/app/api/speechToText/route.ts`: base64-Audio -> `/tmp/input.webm` -> Whisper-Transkription.
-- `src/app/api/chat/route.ts`: Chat-Completion via OpenAI.
-- `src/app/page.tsx`: Desktop-First-Oberfläche und Mobile-Fallback-Nachricht.
+- `src/app/api/chat/route.ts`: Chat Completion über OpenAI.
+- `src/app/page.tsx`: Desktop-zentrierte Oberfläche und Mobile-Fallback-Hinweis.
 
 ## Projektstruktur
 
@@ -171,11 +193,13 @@ voice-assistant-web/
 
 ## Voraussetzungen
 
-- Node.js 18+ (empfohlen: Node.js 18.17+ oder 20 LTS für Next.js 13).
-- npm (das Projekt nutzt `package-lock.json`).
-- OpenAI API key.
-- ElevenLabs API key und Voice ID.
-- Ein Desktop-Browser mit Mikrofonzugriff (die mobile UX ist aktuell designbedingt eingeschränkt).
+| Anforderung | Details |
+| --- | --- |
+| Node.js | 18+ (empfohlen: Node.js 18.17+ oder 20 LTS für Next.js 13) |
+| Paketmanager | npm (Projekt nutzt `package-lock.json`) |
+| API-Zugang | OpenAI API Key |
+| TTS-Zugang | ElevenLabs API Key und Voice ID |
+| Client | Desktop-Browser mit Mikrofonzugriff (Mobile UX ist aktuell Desktop-zentriert) |
 
 ## Installation
 
@@ -185,9 +209,7 @@ voice-assistant-web/
 git clone https://github.com/ntegrals/aura-voice
 ```
 
-2. API-Keys von [https://openai.com/](https://openai.com/) und [https://elevenlabs.com/](https://elevenlabs.com/) holen.
-
-Die Datei `.env.example` nach `.env.local` kopieren und deine Keys eintragen:
+2. Umgebungsvorlage kopieren und Werte setzen:
 
 ```sh
 cp .env.example .env.local
@@ -195,7 +217,7 @@ cp .env.example .env.local
 
 ```sh
 OPENAI_API_KEY="YOUR OPENAI API KEY"
-OPENAI_BASE_URL=(Optional)
+OPENAI_BASE_URL="" # Optional
 NEXT_PUBLIC_ELEVENLABS_API_KEY="YOUR ELEVENLABS API KEY"
 NEXT_PUBLIC_ELEVENLABS_VOICE_ID="YOUR ELEVENLABS VOICE ID"
 ```
@@ -212,32 +234,36 @@ npm install
 npm run dev
 ```
 
-5. Auf Vercel deployen:
+5. App unter `http://localhost:3000` öffnen.
 
-Dieses Projekt ist mit dem standardmäßigen Vercel-Deployment-Flow für Next.js kompatibel.
+Annahme: Beim Testen von Mikrofonzugriff auf Nicht-Lokal-Domains ist HTTPS meist erforderlich.
+
+6. Deployment auf Vercel:
+
+Dieses Projekt folgt einem standardmäßigen Next.js-Deployment-Prozess. Verwenden Sie Vercels Standardeinstellungen und setzen Sie im Projekt dieselben Umgebungsvariablen.
 
 ## Konfiguration
 
-Von diesem Projekt verwendete Umgebungsvariablen:
+Von diesem Projekt genutzte Umgebungsvariablen:
 
 | Variable | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `OPENAI_API_KEY` | Ja | API key für Whisper-Transkription und GPT-Chat-Completion. |
-| `OPENAI_BASE_URL` | Nein | Optionale Überschreibung der OpenAI-API-Basis-URL (Proxy/Gateway). |
-| `NEXT_PUBLIC_ELEVENLABS_API_KEY` | Ja | ElevenLabs API key, der für die browserseitige TTS-Anfrage genutzt wird. |
+| `OPENAI_API_KEY` | Ja | API-Schlüssel für Whisper-Transkription und GPT-Chat-Completion. |
+| `OPENAI_BASE_URL` | Nein | Optionaler Override für die OpenAI-API-Basis-URL (Proxy/Gateway). |
+| `NEXT_PUBLIC_ELEVENLABS_API_KEY` | Ja | ElevenLabs-API-Key für TTS-Anfragen im Browser. |
 | `NEXT_PUBLIC_ELEVENLABS_VOICE_ID` | Ja | ElevenLabs Voice ID für TTS-Synthese. |
 
 Hinweise:
 
-- `NEXT_PUBLIC_*`-Variablen werden gemäß Next.js-Konventionen für den Client verfügbar gemacht.
-- `speechToText` schreibt derzeit temporäres Audio nach `/tmp/input.webm`, bevor transkribiert wird.
+- `NEXT_PUBLIC_*`-Variablen werden vom Next.js-Konventionsmodell auf der Client-Seite verfügbar gemacht.
+- `speechToText` schreibt Audio zunächst temporär nach `/tmp/input.webm`, bevor die Transkription stattfindet.
 
-## Verwendung
+## Nutzung
 
-1. App in einem Desktop-Browser öffnen.
-2. Einmal auf die Assistenten-Kugel klicken und Mikrofonberechtigungen gewähren.
-3. Erneut klicken, um die Aufnahme zu starten, dann noch einmal klicken, um zu stoppen und zu senden.
-4. Aura transkribiert deine Eingabe, erzeugt eine Antwort und spielt anschließend synthetisierte Sprache ab.
+1. Öffnen Sie die App in einem Desktop-Browser.
+2. Klicken Sie einmal auf den Assistenten-Orb und erteilen Sie Mikrofonberechtigungen.
+3. Klicken Sie erneut, um die Aufnahme zu starten, dann erneut, um zu stoppen und zu senden.
+4. Aura transkribiert die Eingabe, erzeugt eine Antwort und spielt synthetisierte Sprache ab.
 
 Lokale Skripte:
 
@@ -248,9 +274,9 @@ npm run start
 npm run lint
 ```
 
-## API-Beispiele
+## API Beispiele
 
-Diese Beispiele sind nützlich zum Debuggen lokaler API-Routen.
+Diese Beispiele sind hilfreich beim Debugging lokaler API-Routen.
 
 ### `POST /api/speechToText`
 
@@ -260,7 +286,7 @@ curl -X POST http://localhost:3000/api/speechToText \
   -d '{"audio":"<base64-webm-audio>"}'
 ```
 
-Erwartete Antwortstruktur:
+Erwartete Antwortform:
 
 ```json
 {
@@ -276,95 +302,103 @@ curl -X POST http://localhost:3000/api/chat \
   -d '{"messages":[{"role":"user","content":"Hello Aura"}]}'
 ```
 
-Erwartete Antwortstruktur:
+Erwartete Antwortform:
 
 ```json
 "Assistant response text"
 ```
 
-## Entwicklungshinweise
+## Entwicklungsnotizen
 
-- Die Chat-Route ist für Edge Runtime konfiguriert (`export const runtime = "edge"`).
-- Die Whisper-Route läuft serverseitig und hängt für temporäre Speicherung vom Dateisystemzugriff ab.
-- Die UI zeigt aktuell eine Mobile-Fallback-Nachricht statt einer vollständigen mobilen Interaktion.
-- Toast-Benachrichtigungen zeigen die Zustände Berechtigung/Zuhören/Nachdenken.
-- Das aktuelle Prompt-Shaping fordert prägnante Antworten (`Your answer has to be as consise as possible.`).
+- Der Chat-Endpunkt ist für die Edge Runtime konfiguriert (`export const runtime = "edge"`).
+- Die Whisper-Route läuft serverseitig und benötigt Dateisystemzugriff für temporäre Speicherung.
+- Die UI zeigt derzeit einen mobilen Fallback-Hinweis statt vollständiger Mobile-Interaktion.
+- Toast-Benachrichtigungen machen Berechtigungs-, Aufnahme- und Denkzustände sichtbar.
+- Aktuelles Prompting fordert kurze Antworten (`Your answer has to be as concise as possible.`).
+- Laufzeit-Logs, Nachvollziehbarkeit von Requests und Streaming-Verhalten sind aktuell in CI nicht getestet (kein automatisiertes Test-Setup im Repo).
 
 ## Fehlerbehebung
 
-### Mikrofon-Berechtigungsabfrage erscheint nicht
+### 🎤 Meldung für Mikrofonberechtigung fehlt
 
-- Stelle sicher, dass dein Browser Mikrofonzugriff für `localhost` erlaubt.
-- Nutze HTTPS beim Testen auf Nicht-`localhost`-Domains.
+- Stellen Sie sicher, dass Ihr Browser den Mikrofonzugriff für `localhost` erlaubt.
+- Verwenden Sie HTTPS beim Testen auf Nicht-Localhost-Domains.
 
-### Keine Audio-Wiedergabe
+### 🔈 Kein Audio wird wiedergegeben
 
-- Prüfe `NEXT_PUBLIC_ELEVENLABS_API_KEY` und `NEXT_PUBLIC_ELEVENLABS_VOICE_ID`.
-- Prüfe Browser-Beschränkungen für Autoplay/AudioContext (Nutzerinteraktion ist erforderlich).
+- Prüfen Sie `NEXT_PUBLIC_ELEVENLABS_API_KEY` und `NEXT_PUBLIC_ELEVENLABS_VOICE_ID`.
+- Prüfen Sie Browser-Autoplay-/AudioContext-Einschränkungen (eine Nutzerinteraktion ist erforderlich).
 
-### API 500 von `/api/speechToText`
+### 📡 API 500 von `/api/speechToText`
 
-- Prüfe, ob `OPENAI_API_KEY` gesetzt ist.
-- Stelle sicher, dass die Eingabe gültiges base64-kodiertes `webm`-Audio enthält.
+- Vergewissern Sie sich, dass `OPENAI_API_KEY` gesetzt ist.
+- Prüfen Sie, dass die Eingabe gültiges Base64-kodiertes `webm`-Audio enthält.
 
-### API 500 von `/api/chat`
+### 📡 API 500 von `/api/chat`
 
-- Prüfe, ob `OPENAI_API_KEY` und optional `OPENAI_BASE_URL` korrekt sind.
-- Prüfe die Modellverfügbarkeit für `gpt-4o` in deinem OpenAI-Konto.
+- Vergewissern Sie sich, dass `OPENAI_API_KEY` und optional `OPENAI_BASE_URL` korrekt sind.
+- Prüfen Sie die Modellverfügbarkeit für `gpt-4o` in Ihrem OpenAI-Account.
 
-### Hohe Latenz
+### ⏳ Hohe Latenz
 
-- TTS-Synthesezeit dominiert normalerweise die Ende-zu-Ende-Latenz.
-- Halte Prompts kurz und erwäge, lange Antworten aufzuteilen.
+- Die TTS-Synthesezeit dominiert meist die End-to-End-Latenz.
+- Halten Sie Prompts kurz und überlegen Sie, lange Antworten aufzuteilen.
 
 ## Roadmap
 
-Potenzielle nächste Verbesserungen, abgeleitet aus aktuellem Code und Notizen:
+Mögliche nächste Verbesserungen laut aktuellem Code und den Notizen:
 
-- Mobile-First-Interaktionssupport (ersetzt die aktuelle Desktop-Only-Begrenzung).
-- Streaming partieller Assistenten-Antworten zur Reduktion der wahrgenommenen Latenz.
-- Bessere Retry-/Error-UX bei Transkriptions- und TTS-Fehlern.
-- Automatisierte Tests und CI-Checks ergänzen.
-- Mehrsprachige Dokumentation unter [`/i18n`](./i18n/) erweitern.
+- Mobile-First-Interaktion (ersetzt die aktuelle Desktop-Only-Einschränkung).
+- Streaming von Teilantworten des Assistenten, um die wahrgenommene Latenz zu senken.
+- Bessere Retry-/Fehler-UX bei Transkriptions- und TTS-Fehlern.
+- Automatisierte Tests und CI-Prüfungen hinzufügen.
+- Multilinguale Dokumentation unter [`/i18n`](./i18n/) erweitern.
 
 ## Mitwirken
 
-Beiträge sind willkommen und geschätzt.
+Beiträge sind willkommen und sehr willkommen.
 
-- Lies [CONTRIBUTING.md](./CONTRIBUTING.md) für Workflow und Erwartungen.
-- Lies [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md), bevor du mitwirkst.
-- Eröffne Issues für Bugs oder Feature-Ideen:
-- Bug report: [template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=)
-- Feature request: [template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=)
+- Lesen Sie [CONTRIBUTING.md](./CONTRIBUTING.md) für den Ablauf und die Erwartungen.
+- Lesen Sie [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md), bevor Sie mitmachen.
+- Öffnen Sie Issues für Fehler oder Feature-Ideen:
+  - Bug report: [Template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=)
+  - Feature request: [Template](https://github.com/ntegrals/aura-voice/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=)
 
 ## Kontakt
 
-Hi! Danke, dass du diese Library ansiehst und nutzt. Wenn du dein Projekt besprechen möchtest, Mentoring brauchst, eine Zusammenarbeit erwägst oder einfach chatten willst, freue ich mich auf den Austausch.
+Hi! Danke, dass Sie sich diese Bibliothek ansehen und nutzen. Wenn Sie Ihr Projekt besprechen möchten, Mentorship suchen, mich beauftragen möchten oder einfach nur chatten wollen, freue ich mich auf Ihre Nachricht.
 
-Du kannst mir eine E-Mail senden: `j.schoen@mail.com` oder mir auf Twitter schreiben: [@julianschoen](https://twitter.com/julianschoen)
+Sie können mir eine E-Mail senden: `j.schoen@mail.com` oder mich auf Twitter kontaktieren: [@julianschoen](https://twitter.com/julianschoen)
 
-Wenn du etwas zurückgeben möchtest, habe ich einen Buy Me A Coffee Account:
+Wenn Sie etwas zurückgeben möchten, habe ich ein Buy Me A Coffee Profil:
 
 <a href="https://www.buymeacoffee.com/ntegrals">
 <img src=".assets/buymeacoffee.png" alt="buymeacoffee" width="192">
 </a>
 
-Danke und hab einen großartigen Tag 👋
+Vielen Dank und einen tollen Tag 👋
 
-## Haftungsausschluss
+## Disclaimer
 
-Voice Assistant ist eine experimentelle Anwendung und wird "wie besehen" ohne jegliche ausdrückliche oder stillschweigende Gewähr bereitgestellt. Mit der Nutzung dieser Software erklärst du dich damit einverstanden, alle mit der Nutzung verbundenen Risiken zu tragen, einschließlich, aber nicht beschränkt auf Datenverlust, Systemausfälle oder andere Probleme, die auftreten können.
+Voice Assistant ist eine experimentelle Anwendung und wird „wie besehen“ ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt. Durch die Nutzung dieser Software akzeptieren Sie das volle Risiko ihrer Verwendung, einschließlich, aber nicht beschränkt auf Datenverlust, Systemausfälle oder sonstige aufkommende Probleme.
 
-Die Entwickler und Mitwirkenden dieses Projekts übernehmen keine Verantwortung oder Haftung für Verluste, Schäden oder sonstige Folgen, die durch die Nutzung dieser Software entstehen können. Du bist allein verantwortlich für alle Entscheidungen und Handlungen, die auf Basis der von Voice Assistant bereitgestellten Informationen getroffen werden.
+Die Entwickler und Beitragenden dieses Projekts übernehmen keine Verantwortung oder Haftung für Verluste, Schäden oder andere Folgen, die aus der Nutzung dieser Software entstehen können. Sie tragen allein die Verantwortung für Entscheidungen und Handlungen, die auf von Voice Assistant bereitgestellten Informationen beruhen.
 
-Bitte beachte, dass die Nutzung des GPT-4-Sprachmodells aufgrund des Token-Verbrauchs teuer sein kann. Durch die Nutzung dieses Projekts bestätigst du, dass du selbst für die Überwachung und Verwaltung deines Token-Verbrauchs und der damit verbundenen Kosten verantwortlich bist. Es wird dringend empfohlen, deine OpenAI-API-Nutzung regelmäßig zu prüfen und notwendige Limits oder Alerts einzurichten, um unerwartete Kosten zu vermeiden.
+Bitte beachten Sie, dass die Nutzung des GPT-4-Sprachmodells teuer sein kann, da die Token-Nutzung entsprechend Kosten verursacht. Durch die Nutzung dieses Projekts bestätigen Sie, dass Sie Ihren eigenen Tokenverbrauch und die damit verbundenen Kosten selbst überwachen und steuern. Es wird dringend empfohlen, die Nutzung der OpenAI API regelmäßig zu prüfen und bei Bedarf Limits oder Benachrichtigungen einzurichten, um unerwartete Gebühren zu vermeiden.
 
-Mit der Nutzung von Voice Assistant erklärst du dich einverstanden, die Entwickler, Mitwirkenden und alle verbundenen Parteien von sämtlichen Ansprüchen, Schäden, Verlusten, Verbindlichkeiten, Kosten und Aufwendungen (einschließlich angemessener Anwaltsgebühren) freizustellen, zu verteidigen und schadlos zu halten, die aus deiner Nutzung dieser Software oder aus einem Verstoß gegen diese Bedingungen entstehen.
+Durch die Nutzung von Voice Assistant erklären Sie sich damit einverstanden, Entwickler, Beitragende und verbundene Parteien von allen Ansprüchen, Schäden, Verlusten, Haftungsfällen, Kosten und Ausgaben (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus der Nutzung dieser Software oder aus der Verletzung dieser Bedingungen ergeben.
 
 <!-- LICENSE -->
 
 ## Lizenz
 
-Veröffentlicht unter der MIT-Lizenz. Weitere Informationen unter `LICENSE`.
+Veröffentlicht unter der MIT-Lizenz. Weitere Informationen finden Sie in `LICENSE`.
 
-Hinweis zum Repository: Dieses Repository speichert die Lizenzdatei derzeit als [`LICENCE`](./LICENCE).
+Repository-Hinweis: Diese Repository speichert derzeit die Lizenzdatei als [`LICENCE`](./LICENCE).
+
+
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
